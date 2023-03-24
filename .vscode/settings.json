@@ -1,0 +1,43 @@
+{
+    "deploy.reloaded": {
+        "values": {
+            "outputDir": {
+                "type": "code",
+                "code": "require('os').homedir() + '/'"
+            }
+        },
+        
+        "packages": [
+            {
+                "name": "Silver Emblems",
+                "description": "Silver Emblems",
+
+                "button": {
+                    "text": "Deploy to Silver Emblems",
+                    
+                    "targets": [ "Silver Emblems" ]
+                },
+
+                "files": [
+                    "**",
+                ],
+                "exclude": [
+                    ".vscode/**",
+                    "*.md"
+                ],
+
+                "deployOnSaveButton": [ "Silver Emblems" ]
+            },
+        ],
+
+        "targets": [          
+            {
+                "type": "local",
+                "name": "Silver Emblems",
+                "description": "Local folder",
+
+                "dir": "${outputDir}/Documents/Paradox Interactive/Stellaris/mod/silver_emblems/"
+            },
+        ]
+    }
+}
